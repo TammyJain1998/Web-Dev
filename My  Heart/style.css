@@ -1,0 +1,49 @@
+body {
+    background-color: black; /* Set background color to black */
+    color: white; /* Set text color to white */
+}
+h1 {
+    font-family: Monaco, monospace; /* Set font family to Monaco */
+    font-weight: bold; /* Make the font bold */
+    margin-top: 100px; /* Add margin at the top */
+    text-align: center; /* Center the text */
+}
+h2 {
+    font-family: Monaco, monospace; /* Set font family to Monaco */
+    font-weight: bold; /* Make the font bold */
+  font-size: 20px;
+    margin-top: 20px; /* Add margin at the top */
+    text-align: center; /* Center the text */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px; /* Adjust as needed */
+    justify-content: center; /* Center grid horizontally */
+}
+
+.grid-item {
+    position: relative;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
+    cursor: pointer;
+}
+
+.grid-item:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
