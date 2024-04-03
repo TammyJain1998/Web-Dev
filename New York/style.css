@@ -1,0 +1,19 @@
+  /* Best practices for default behaviors */
+  *, *::after, *::before {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+  }
+  /* Set your base font size in HTML to 16px - all your REM values will
+  be set relative to this value. See: http://tachyons.io/docs/typography/scale/ */
+  html{
+    font-size: 16px;
+  }
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #links{
+  }
+
+  
