@@ -17,6 +17,11 @@
   .main{
     display: flex;
   }
+  @media screen and (max-width:800px) {
+    .main{
+    flex-direction: column;
+    }
+  }
 
   .nav{
     padding: 1rem 0.5rem 1rem 0.5rem;
@@ -54,11 +59,26 @@
     padding:0;
     margin-bottom: -120px;
   }
+  @media screen and (max-width:800px) {
+    .heading1{
+        font-size: 140px;
+        padding:0;
+        margin-bottom: -80px;
+        margin-top: 250px;
+    }
+  }
 
   .heading2{
     font-size: 440px;
     padding:0;
     margin-left: 10px
+  }
+  @media screen and (max-width:800px) {
+    .heading2{
+        font-size: 250px;
+        padding:0;
+        margin-bottom: -120px;
+    }
   }
 
   .rect{
@@ -67,6 +87,12 @@
     background-color: black;
     margin-left:-21.5px;
   }
+  @media screen and (max-width:800px) {
+    .rect{
+        height: 0px
+    }
+  }
+
 
   .imaGe {
     width: 34.2rem;
@@ -74,14 +100,28 @@
     background-image: url(Empire.jpg);
     background-position: center;
     background-size: cover;
-    position: absolute;
     top: 0;
     right: 0; /* Set width from right side */
 }
+@media screen and (max-width:800px) {
+    .imaGe{
+        width: 33rem;
+        height: 55rem;
+        background-position: top;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        border-radius: 20px;
+    }
+  }
 
 .blank2{
     height:6vh;
 }
+@media screen and (max-width:800px) {
+    .blank2{
+        height: 200px
+    }
+  }
 
 .Text{
     margin-left: 2.5rem;
@@ -132,3 +172,11 @@
     margin: 20px auto; /* Center the grid */
     margin-left: 2rem;
 }
+@media screen and (max-width:800px) {
+    .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 2rem;
+        margin-right: 2rem;
+        border-radius: 20px;
+    }
+  }
