@@ -4,8 +4,8 @@ My Home 🏠
 I have been living in New York for the past 5 years and there is not other place I would call home.
 
 ## Setup and Run
-1. Glitch Website: https://allmyheart.glitch.me/My%20%20Heart/
-2. Glitch Code: https://glitch.com/edit/#!/allmyheart
+1. Glitch Website: https://new-york-assignment2.glitch.me/New%20York/
+2. Glitch Code: https://glitch.com/edit/#!/new-york-assignment2
 3. Clone Github Repository: https://github.com/TammyJain1998/Web-Dev.git
 
 Open the Folder "All my Heart" to access the html and css files.
