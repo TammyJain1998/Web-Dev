@@ -8,7 +8,7 @@ I have been living in New York for the past 5 years and there is not other place
 2. Glitch Code: https://glitch.com/edit/#!/new-york-assignment2
 3. Clone Github Repository: https://github.com/TammyJain1998/Web-Dev.git
 
-Open the Folder "All my Heart" to access the html and css files.
+Open the Folder "New York" to access the html and css files.
 
 ## Concept and Steps
 For this website, I developed a single page layout based on the same design concepts of 'Swiss Poster Design'.
