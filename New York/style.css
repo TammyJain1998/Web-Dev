@@ -80,7 +80,13 @@
 }
 
 .blank2{
-    height:10vh;
+    height:6vh;
+}
+
+.Text{
+    margin-left: 2.5rem;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .image {
