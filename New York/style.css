@@ -11,9 +11,64 @@
   }
   body{
     font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(248,215,98);
   }
 
   #links{
   }
 
-  
+  .main{
+    display: flex;
+  }
+
+  .nav{
+    padding: 1rem 0.5rem 1rem 0.5rem;
+  }
+  .nav__list{
+    display:flex;
+    list-style: none;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .nav__item > a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+  .nav__item:not(:last-child){
+    margin-right:1rem;
+  }
+
+  .blank{
+    padding: 1rem 0.5rem 1rem 0.5rem; 
+    height: 25vh;
+  }
+
+  .facts{
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    margin-left: 1rem;
+    width: 55vh;
+    overflow: auto; /* Add this to enable scrolling if content exceeds the height */
+    word-wrap:break-word ;
+    font-size: 11px;
+    font-weight: bold;
+  }
+
+  .heading{
+    margin-left: 1rem;
+  }
+  .heading1{
+    font-size: 150px;
+    padding:0;
+    margin-bottom: -70px;
+  }
+  .heading2{
+    font-size: 250px;
+    padding:0;
+    margin-left: 10px
+  }
+
+  .image{
+    padding: 1rem 0.5rem 1rem 0.5rem;
+  }
