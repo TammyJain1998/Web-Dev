@@ -96,7 +96,7 @@
 
   .imaGe {
     width: 34.2rem;
-    height: 95rem;
+    height: 120rem;
     background-image: url(Empire.jpg);
     background-position: center;
     background-size: cover;
@@ -105,8 +105,8 @@
 }
 @media screen and (max-width:800px) {
     .imaGe{
-        width: 33rem;
-        height: 55rem;
+        width: 34.5rem;
+        height: 90rem;
         background-position: top;
         margin-left: 2rem;
         margin-right: 2rem;
@@ -115,7 +115,7 @@
   }
 
 .blank2{
-    height:6vh;
+    height:60vh;
 }
 @media screen and (max-width:800px) {
     .blank2{
