@@ -87,9 +87,10 @@
 
   @media screen and (max-width:800px) {
     .heading2 {
-      font-size: 270px;
+      font-size: 255px;
       padding: 0;
       margin-bottom: -120px;
+      margin-right: 4rem;
     }
   }
 
@@ -120,7 +121,7 @@
 
   @media screen and (max-width:800px) {
     .imaGe {
-      width: 34.5rem;
+      width: 34rem;
       height: 90rem;
       background-position: top;
       margin-left: 2rem;

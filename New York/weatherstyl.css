@@ -47,11 +47,12 @@ nav {
 .horizontalblank2 {
     height: 7rem;
 }
+
 @media screen and (max-width:800px) {
     .horizontalblank2 {
         height: 0rem;
     }
-  }
+}
 
 .blank {
     width: 10rem;
@@ -70,15 +71,16 @@ nav {
     right: 0;
     /* Set width from right side */
 }
+
 @media screen and (max-width:800px) {
     .image {
-        margin-left: 4rem;
+        margin-left: 3rem;
         width: 30rem;
         height: 30rem;
-        align-items:center;
+        align-items: center;
         background-position: center;
     }
-  }
+}
 
 .weatherAll {
     display: flex;
@@ -87,13 +89,14 @@ nav {
     /* This will arrange its children (including .weatherDetail) in a row by default */
     margin-left: 1rem;
 }
+
 @media screen and (max-width:800px) {
     .weatherAll {
         display: flex;
         /* This makes the .weatherAll a flex container */
         flex-direction: column;
     }
-  }
+}
 
 .weatherDetail {
     display: flex;
@@ -110,11 +113,12 @@ nav {
     padding: 0;
     margin-left: 6rem;
 }
+
 @media screen and (max-width:800px) {
     .temp {
-margin-left: 1rem;
+        margin-left: 1rem;
     }
-  }
+}
 
 .NYC {
     font-size: 30px;
@@ -124,11 +128,12 @@ margin-left: 1rem;
     margin-top: -10px;
     color: rgba(248, 215, 98);
 }
+
 @media screen and (max-width:800px) {
     .NYC {
-margin-left: 1rem;
+        margin-left: 1rem;
     }
-  }
+}
 
 .description {
     font-size: 45px;
@@ -136,11 +141,12 @@ margin-left: 1rem;
     padding: 0;
     margin-left: 6rem;
 }
+
 @media screen and (max-width:800px) {
     .description {
-margin-left: 1rem;
+        margin-left: 1rem;
     }
-  }
+}
 
 
 .horizontal {
@@ -156,6 +162,12 @@ margin-left: 1rem;
     flex-direction: row;
     /* Arranges the children of .humidity and .wind in columns */
     margin-left: 0rem;
+}
+
+@media screen and (max-width:800px) {
+    .humidity {
+        margin-left: -0.5rem;
+    }
 }
 
 .humdityImage {
@@ -175,11 +187,12 @@ margin-left: 1rem;
     /* Arranges the children of .humidity and .wind in columns */
     margin-left: 1rem;
 }
+
 @media screen and (max-width:800px) {
     .wind {
-margin-right: 5.5rem;
+        margin-right: 5.5rem;
     }
-  }
+}
 
 .windImage {
     width: 5rem;
@@ -203,20 +216,23 @@ margin-right: 5.5rem;
     margin-bottom: auto;
     padding: 0;
 }
+
 .text1_2 {
     font-size: 40px;
     font-weight: bold;
     margin-bottom: auto;
     padding: 0;
 }
+
 .text2 {
     font-size: 25px;
 }
+
 @media screen and (max-width:800px) {
     .text2 {
-margin-bottom: 4rem;
+        margin-bottom: 4rem;
     }
-  }
+}
 
 
 .unit {
