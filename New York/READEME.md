@@ -4,9 +4,11 @@ My Home 🏠
 I have been living in New York for the past 5 years and there is not other place I would call home.
 
 ## Setup and Run
-1. Glitch Website: https://new-york-assignment2.glitch.me/New%20York/
-2. Glitch Code: https://glitch.com/edit/#!/new-york-assignment2
+1. Glitch Website: https://new-york-weather.glitch.me/New%20York/
+2. Glitch Code: https://glitch.com/edit/#!/new-york-weather
 3. Clone Github Repository: https://github.com/TammyJain1998/Web-Dev.git
+
+4. Figma: https://www.figma.com/file/bCkNNDRf5OY5X0oyxNQ1Ye/Untitled?type=design&node-id=0%3A1&mode=design&t=TzfpFXVK1OUwANIZ-1
 
 Open the Folder "New York" to access the html and css files.
 
