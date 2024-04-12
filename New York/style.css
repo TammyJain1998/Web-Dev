@@ -1,95 +1,108 @@
   /* Best practices for default behaviors */
-  *, *::after, *::before {
-    padding:0;
-    margin:0;
+  *,
+  *::after,
+  *::before {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
   }
+
   /* Set your base font size in HTML to 16px - all your REM values will
   be set relative to this value. See: http://tachyons.io/docs/typography/scale/ */
-  html{
+  html {
     font-size: 16px;
   }
-  body{
+
+  body {
     font-family: Arial, Arial, Helvetica, sans-serif;
-    background-color: rgba(248,215,98);
+    background-color: rgba(248, 215, 98);
   }
 
-  .main{
+  .main {
     display: flex;
   }
+
   @media screen and (max-width:800px) {
-    .main{
-    flex-direction: column;
+    .main {
+      flex-direction: column;
     }
   }
 
-  .nav{
+  .nav {
     padding: 1rem 0.5rem 1rem 0.5rem;
   }
-  .nav__list{
-    display:flex;
+
+  .nav__list {
+    display: flex;
     list-style: none;
     margin-top: 1rem;
     margin-left: 1rem;
     font-weight: bold;
     font-size: 30px;
   }
-  .nav__item > a {
+
+  .nav__item>a {
     color: rgb(0, 0, 0);
     text-decoration: none;
   }
-  .nav__item:not(:last-child){
-    margin-right:1rem;
+
+  .nav__item:not(:last-child) {
+    margin-right: 1rem;
   }
 
-  .facts{
+  .facts {
     padding: 1rem 0.5rem 1rem 0.5rem;
     margin-left: 1rem;
     width: 60vh;
-    overflow: auto; /* Add this to enable scrolling if content exceeds the height */
-    word-wrap:break-word ;
+    overflow: auto;
+    /* Add this to enable scrolling if content exceeds the height */
+    word-wrap: break-word;
     font-size: 14px;
   }
 
-  .heading{
+  .heading {
     margin-left: 1rem;
   }
-  .heading1{
+
+  .heading1 {
     font-size: 250px;
-    padding:0;
+    padding: 0;
     margin-bottom: -120px;
   }
+
   @media screen and (max-width:800px) {
-    .heading1{
-        font-size: 140px;
-        padding:0;
-        margin-bottom: -80px;
-        margin-top: 250px;
+    .heading1 {
+      font-size: 140px;
+      padding: 0;
+      margin-bottom: -80px;
+      margin-top: 250px;
     }
   }
 
-  .heading2{
+  .heading2 {
     font-size: 440px;
-    padding:0;
+    padding: 0;
     margin-left: 10px
   }
+
   @media screen and (max-width:800px) {
-    .heading2{
-        font-size: 270px;
-        padding:0;
-        margin-bottom: -120px;
+    .heading2 {
+      font-size: 270px;
+      padding: 0;
+      margin-bottom: -120px;
     }
   }
 
-  .rect{
+  .rect {
     height: 32.75rem;
     width: 15px;
     background-color: black;
-    margin-left:-21.5px;
+    margin-left: -21.5px;
   }
+
   @media screen and (max-width:800px) {
-    .rect{
-        height: 0px
+    .rect {
+      height: 0px
     }
   }
 
@@ -101,82 +114,89 @@
     background-position: center;
     background-size: cover;
     top: 0;
-    right: 0; /* Set width from right side */
-}
-@media screen and (max-width:800px) {
-    .imaGe{
-        width: 34.5rem;
-        height: 90rem;
-        background-position: top;
-        margin-left: 2rem;
-        margin-right: 1rem;
-        border-radius: 20px;
+    right: 0;
+    /* Set width from right side */
+  }
+
+  @media screen and (max-width:800px) {
+    .imaGe {
+      width: 34.5rem;
+      height: 90rem;
+      background-position: top;
+      margin-left: 2rem;
+      margin-right: 1rem;
+      border-radius: 20px;
     }
   }
 
-.blank2{
-    height:60vh;
-}
-@media screen and (max-width:800px) {
-    .blank2{
-        height: 200px
+  .blank2 {
+    height: 60vh;
+  }
+
+  @media screen and (max-width:800px) {
+    .blank2 {
+      height: 200px
     }
   }
 
-.Text{
+  .Text {
     margin-left: 2.5rem;
     font-weight: bold;
     font-size: 20px;
-}
+  }
 
-.image {
+  .image {
     width: 260px;
     height: 260px;
     background-size: cover;
     background-position: center;
     margin-bottom: 20px;
     border-radius: 20px;
-}
+  }
 
-.image1 {
+  .image1 {
     background-image: url('CP.jpg');
-}
+  }
 
-.image2 {
+  .image2 {
     background-image: url('BB.jpg');
-}
+  }
 
-.image3 {
+  .image3 {
     background-image: url('Vessel.jpg');
-}
+  }
 
-.image4 {
+  .image4 {
     background-image: url('washington.jpg');
     margin-bottom: 0px;
-}
+  }
 
-.image5 {
+  .image5 {
     background-image: url('WTC.jpg');
     margin-bottom: 0px;
-}
+  }
 
-.image6 {
+  .image6 {
     background-image: url('Statue.jpeg');
     margin-bottom: 0px;
-}
+  }
 
-.grid-container {
+  .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    gap: 10px; /* Gap between grid items */
-    margin: 20px auto; /* Center the grid */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns */
+    gap: 10px;
+    /* Gap between grid items */
+    margin: 20px auto;
+    /* Center the grid */
     margin-left: 2rem;
-}
-@media screen and (max-width:800px) {
-    .grid-container{
-        grid-template-columns: repeat(2, 1fr);
-        margin-left: 2rem;
-        margin-right: 1rem;
-        border-radius: 20px;
+  }
+
+  @media screen and (max-width:800px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+      margin-left: 2rem;
+      margin-right: 1rem;
+      border-radius: 20px;
     }
   }
