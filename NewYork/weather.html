@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>New York</title>
+    <link rel="stylesheet" href="weatherstyl.css">
+</head>
+
+<body>
+    <main class="main debug">
+        <div class="body">
+            <div id="links">
+                <nav class="nav debug">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" noreferrer>Home</a></li>
+                        <li class="nav__item"><a href="/about"  noreferrer>Facts</a></li>
+                        <li class="nav__item"><a href="/contact"  noreferrer>Weather</a></li>
+                        <div class="blankspace"></div>
+                        <li class="nav__item"><a href="/subscribe" noreferrer>Subscribe</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="horizontalblank"></div>
+            <div class="weatherAll">
+                <div class="blank"></div>
+                <div class="image">
+                    <p></p>
+                </div>
+                <div class="weatherDetail">
+                    <div class="horizontalblank2"></div>
+                    <div class="data"></div>
+                    <div class="temp"></div>
+                    <div class="NYC">New York</div>
+                    <div class="description">Sunny</div>
+                    <div class="blank2"></div>
+                    <div class="horizontal">
+                        <div class="humidity">
+                            <div class="humdityImage"></div>
+                            <div class="vertical">
+                                <div class="text">
+                                    <p class="text1_1">90</p>
+                                    <p class="unit">%</p>
+                                </div>
+                                <div class="text2">Humidity</div>
+                            </div>
+                            <div class="wind">
+                                <div class="windImage"></div>
+                                <div class="vertical">
+                                    <div class="text">
+                                        <p class="text1_2">68</p>
+                                        <p class="unit">MPH</p>
+                                    </div>
+                                    <div class="text2">Wind</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <script>
+        const weatherImages = {
+            "Sunny": "sun.png",
+            "Clear Sky": "sun.png",
+            "Few Clouds": "cloudy.png",
+            "Clouds": "cloudy.png",
+            "Scattered Clouds": "clouds.png",
+            "Broken Clouds": "clouds.png",
+            "Shower Rain": "rain.png",
+            "Rain": "rain.png",
+            "Drizzle": "rain.png",
+            "Thunderstorm": "thunderstorm.png",
+            "Snow": "snow.png",
+            "Mist": "mist.png",
+            "Haze": "mist.png",
+            // Add more mappings as needed
+            "default": "cloudy.png" // A default image
+        };
+
+        let api_url = 'https://api.openweathermap.org/data/2.5/weather?q=New%20York&appid=4b8773664c9a8d457e2ef476b5e41dbd&units=metric';
+        async function getData() {
+            const response = await fetch(api_url);
+            const data = await response.json();
+
+            document.getElementsByClassName('temp')[0].textContent = Math.round(data.main.temp) + '°C';
+            document.getElementsByClassName('description')[0].textContent = data.weather[0].main;
+            document.getElementsByClassName('text1_1')[0].textContent = data.main.humidity;
+            document.getElementsByClassName('text1_2')[0].textContent = data.wind.speed;
+            const weatherCondition = data.weather[0].main;
+    const imageName = weatherImages[weatherCondition]; // Use default if no match
+    const imageUrl = `${imageName}`;
+    document.getElementsByClassName('image')[0].style.backgroundImage = `url('${imageUrl}')`;
+            // console.log(data.main.temp);
+            // console.log(data.main.humidity);
+            // console.log(data.wind.speed);
+            // console.log(data.weather[0].main);
+        }
+        getData()
+    </script>
+    </body>
+    
+    </html>

@@ -1,0 +1,62 @@
+/* Best practices for default behaviors */
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Set your base font size in HTML to 16px - all your REM values will
+  be set relative to this value. See: http://tachyons.io/docs/typography/scale/ */
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    background-color: rgba(255, 255, 255);
+}
+
+.blankspace{
+width: 62rem;
+}
+@media screen and (max-width:800px) {
+    .blankspace{
+        width: 0rem;
+        }
+}
+
+.nav {
+    padding: 1rem 0.5rem 1rem 0.5rem;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.nav__item>a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.nav__item:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.image{
+    width: 45rem;
+    height: 32rem;
+    margin-top: -2rem;
+    margin-left: 27rem;
+    margin-right: 30rem;
+    background-image: url(subscribe.png);
+    background-position: center;
+    background-size: cover;
+    align-items: center;   
+}

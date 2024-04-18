@@ -1,0 +1,21 @@
+{
+  "name": "newyork",
+  "version": "1.0.0",
+  "description": "New York Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "New",
+    "York",
+    "NY",
+    "Subscribe",
+    "Data"
+  ],
+  "author": "Tamanna Jain",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
