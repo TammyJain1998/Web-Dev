@@ -31,6 +31,7 @@
                     <button type="submit" id="submit">Submit</button>
                 </form>
             </div>
+            <div id="data"></div>
         </div>
     </main>
     <script>
@@ -46,13 +47,18 @@
         },
         body: JSON.stringify(data),
     };
-    fetch('/api', options)  // Ensure this matches the server route
-        .then(response => {
-            return response.json();
-        })
-        .then(data => console.log('Success:', data))
-        .catch(error => console.error('Error:', error));
-});
+    fetch('/api', options)
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Success:', data);
+                    console.log('Received Email:', data.email);
+                    document.getElementById('data').textContent = 'Thanks for subscribing! We are excited to have you with us. Get ready to stay updated on all things New York! We cant wait to share more with you soon! An email will be sent to ' + data.email + '!!';
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('data').textContent = 'Error sending email';
+                });
+        });
     </script>
 
 </body>
