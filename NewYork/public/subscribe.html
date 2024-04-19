@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>New York</title>
+    <link rel="stylesheet" href="subscribestyle.css">
+</head>
+
+<body>
+    <main class="main debug">
+        <div class="body">
+            <div id="links">
+                <nav class="nav debug">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" noreferrer>Home</a></li>
+                        <li class="nav__item"><a href="/about" noreferrer>Facts</a></li>
+                        <li class="nav__item"><a href="weather.html" rel="noreferrer">Weather</a></li>
+                        <div class="blankspace"></div>
+                        <li class="nav__item"><a href="subscribe.html" noreferrer>Subscribe</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="image"></div>
+            <div class="subscribe">SUBSCRIBE</div>
+            <div class="description">Subscribe to our newsletter to stay updates about New York</div>
+            <div class="buttons">
+                <form id="subscribeForm">
+                    <input type="email" id="email" name="email" placeholder="Enter your email address">
+                    <button type="submit" id="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var email = document.getElementById('email').value;
+    console.log(email)
+    const data = { email };
+    const options = {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data),
+    };
+    fetch('/api', options)  // Ensure this matches the server route
+        .then(response => {
+            return response.json();
+        })
+        .then(data => console.log('Success:', data))
+        .catch(error => console.error('Error:', error));
+});
+    </script>
+
+</body>
+
+</html>
