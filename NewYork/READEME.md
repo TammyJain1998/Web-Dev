@@ -25,6 +25,5 @@ The project is made entirely using CSS and HTML code since we did not cover java
 ## Weather API from OpenWeather
 I enhanced my project by integrating real-time weather data through the OpenWeather API, starting by obtaining a complimentary API key. Initially, there was a waiting period of two hours for the activation of the key, during which I utilized the time effectively by diving into CodinTrain's informative videos on API usage. These tutorials were instrumental in familiarizing myself with JSON file handling. Once the key was activated, I began harvesting essential weather parameters such as temperature, humidity, and wind speed. To enrich the user experience and make the data more intuitive, I carefully selected and assigned relevant icons that accurately reflect the weather conditions described in the data. This step not only made the information more accessible but also visually engaging.
 
-## Problems
-1. I am still facing problems with the terminal, like deploying everything to github.
-
+## Creating an email API for subscription
+For my website, I recently implemented a subscription feature, allowing visitors to submit their email addresses. Utilizing a basic email API, the server collects this data and responds with a confirmation message, including the submitted email address. As a novice in backend development, this project presented some initial challenges, but it served as a valuable learning experience. Moving forward, I'm eager to explore more complex APIs and further enhance my backend development skills.
