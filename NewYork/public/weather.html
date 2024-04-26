@@ -15,7 +15,7 @@
                 <nav class="nav debug">
                     <ul class="nav__list">
                         <li class="nav__item"><a href="index.html" noreferrer>Home</a></li>
-                        <li class="nav__item"><a href="/about"  noreferrer>Facts</a></li>
+                        <li class="nav__item"><a href="place.html"  noreferrer>Places</a></li>
                         <li class="nav__item"><a href="weather.html"  noreferrer>Weather</a></li>
                         <div class="blankspace"></div>
                         <li class="nav__item"><a href="subscribe.html" noreferrer>Subscribe</a></li>
@@ -81,25 +81,22 @@
             "default": "cloudy.png" // A default image
         };
 
-        let api_url = 'https://api.openweathermap.org/data/2.5/weather?q=New%20York&appid=4b8773664c9a8d457e2ef476b5e41dbd&units=metric';
         async function getData() {
-            const response = await fetch(api_url);
+            const response = await fetch('/weather');  // Fetching from your Node.js backend
             const data = await response.json();
 
             document.getElementsByClassName('temp')[0].textContent = Math.round(data.main.temp) + '°C';
             document.getElementsByClassName('description')[0].textContent = data.weather[0].main;
             document.getElementsByClassName('text1_1')[0].textContent = data.main.humidity;
             document.getElementsByClassName('text1_2')[0].textContent = data.wind.speed;
-            const weatherCondition = data.weather[0].main;
-    const imageName = weatherImages[weatherCondition]; // Use default if no match
-    const imageUrl = `${imageName}`;
-    document.getElementsByClassName('image')[0].style.backgroundImage = `url('${imageUrl}')`;
-            // console.log(data.main.temp);
-            // console.log(data.main.humidity);
-            // console.log(data.wind.speed);
-            // console.log(data.weather[0].main);
+
+            const weatherCondition = data.weather[0].main || 'default';
+            const imageName = weatherImages[weatherCondition] || weatherImages['default'];
+            const imageUrl = `${imageName}`;
+            document.getElementsByClassName('image')[0].style.backgroundImage = `url('${imageUrl}')`;
         }
-        getData()
+
+        getData();
     </script>
     </body>
     

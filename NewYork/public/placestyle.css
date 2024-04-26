@@ -1,0 +1,82 @@
+ /* Best practices for default behaviors */
+ *,
+ *::after,
+ *::before {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+ }
+
+ /* Set your base font size in HTML to 16px - all your REM values will
+ be set relative to this value. See: http://tachyons.io/docs/typography/scale/ */
+ html {
+   font-size: 16px;
+ }
+
+ body {
+   font-family: Arial, Arial, Helvetica, sans-serif;
+   background-color: rgba(248, 215, 98);
+ }
+
+ .blankspace{
+    width: 62rem;
+    }
+    @media screen and (max-width:800px) {
+        .blankspace{
+            width: 0rem;
+            }
+    }
+
+ .main {
+   display: flex;
+ }
+
+ @media screen and (max-width:800px) {
+   .main {
+     flex-direction: column;
+   }
+ }
+
+ .nav__list {
+    display: flex;
+    list-style: none;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  .nav__item>a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+
+  .nav__item:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+#placeList{
+    display: flex;
+    flex-direction: row;
+}
+
+.place {
+    margin: 20px;
+    padding: 10px;
+    /* border: 1px solid rgb(0, 0, 0); */
+    border-radius: 8px;
+    width: 50%;
+    max-width: 300px;
+}
+img {
+    width: 100%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px;
+}
+h1 {
+    color: rgb(0, 0, 0);
+    margin-top: 2rem;
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 20px;
+}

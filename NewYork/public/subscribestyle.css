@@ -117,7 +117,7 @@ width: 62rem;
     height: 40px; /* Adjust the height as needed */
     border-radius: 10px; /* Set the border radius to 20px */
     border: none; /* Remove the border */
-    background-color: lightgray; /* Set the background color to dark gray */
+    background-color: rgba(248, 215, 98); /* Set the background color to dark gray */
     text-align: center; /* Center the text horizontally */
     /* Add any additional styling here */
     font-size: 18px;
@@ -130,6 +130,6 @@ width: 62rem;
     height: 40px; /* Adjust the height as needed */
     border-radius: 10px; /* Set the border radius to 20px */
     border: none; /* Remove the border */
-    background-color: lightgray; /* Set the background color to dark gray */
+    background-color: rgba(248, 215, 98); /* Set the background color to dark gray */
     font-size: 18px;
 }
