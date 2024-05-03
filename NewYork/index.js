@@ -20,7 +20,11 @@ app.use(express.static('public'));
 app.use(express.json({ limit: '1mb' }));
 app.use(cors());
 
-app.listen(process.env.PORT || 3002, () => console.log('Listening at port ${process.env.PORT || 3002}'));
+const port = process.env.PORT || 3002
+
+app.listen(port, () => {
+    console.log(`Listening at ${port}`)
+});
 
 app.post('/api', (request, response) => {
     const newEmail = request.body;
