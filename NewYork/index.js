@@ -9,8 +9,9 @@ const Place = require('./models/places');
 const filePath = path.join(__dirname, 'emails.json');
 
 //connect to mongodb
-const dbURL = "mongodb+srv://tamannajain:Tamanna1998@places.m2dgelx.mongodb.net/NewYork?retryWrites=true&w=majority&appName=Places";
-mongoose.connect(dbURL)
+//const dbURL = "mongodb+srv://tamannajain:Tamanna1998@places.m2dgelx.mongodb.net/NewYork?retryWrites=true&w=majority&appName=Places";
+
+mongoose.connect(process.env.MONGO_URL)
   .then((result) => console.log('connected to db'))
   .catch((err) => console.error('Failed to connect to db', err));
 
@@ -19,7 +20,7 @@ app.use(express.static('public'));
 app.use(express.json({ limit: '1mb' }));
 app.use(cors());
 
-app.listen(3002, () => console.log('Listening at port 3002'));
+app.listen(process.env.PORT || 3002, () => console.log('Listening at port ${process.env.PORT || 3002}'));
 
 app.post('/api', (request, response) => {
     const newEmail = request.body;

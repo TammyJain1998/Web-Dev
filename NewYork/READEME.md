@@ -35,6 +35,6 @@ I enhanced my project by integrating real-time weather data through the OpenWeat
 
 For my website, I recently implemented a subscription feature, allowing visitors to submit their email addresses. Utilizing a basic email API, the server collects this data and responds with a confirmation message, including the submitted email address. As a novice in backend development, this project presented some initial challenges, but it served as a valuable learning experience. Moving forward, I'm eager to explore more complex APIs and further enhance my backend development skills.
 
-## Problem
+## Connecting to MongoDB to add data for Places in New York
 
-I am unable to figure out why, after deploying the website, the emails are not being sent to the server. I added the start script to my package.json. It is still not working.
+For this website, I enhanced the user experience by incorporating a dedicated page that showcases a curated list of must-visit places in New York. This was achieved by integrating MongoDB Atlas for database connectivity. I created a places.js file, which serves as a central repository for all the key details of each location. These entries can be dynamically added to the database and are displayed on the webpage in a visually appealing grid layout, accommodating four places per row.

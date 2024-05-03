@@ -96,18 +96,31 @@
 
   @media screen and (max-width:800px) {
     .heading2 {
-      font-size: 255px;
+      font-size: 230px;
       padding: 0;
+      margin-top: 1rem;
       margin-bottom: -120px;
       margin-right: 4rem;
     }
   }
+
+
+  @keyframes growHeight {
+    from {
+        height: 0; /* Start from zero height */
+    }
+    to {
+        height: 32.75rem; /* Grow to full height */
+    }
+}
+
 
   .rect {
     height: 32.75rem;
     width: 15px;
     background-color: black;
     margin-left: -21.5px;
+    animation: growHeight 2s ease-out forwards; /* Use the defined animation */
   }
 
   @media screen and (max-width:800px) {
@@ -130,17 +143,18 @@
 
   @media screen and (max-width:800px) {
     .imaGe {
-      width: 34rem;
+      width: 33rem;
       height: 90rem;
       background-position: top;
       margin-left: 2rem;
       margin-right: 1rem;
       border-radius: 20px;
+      margin-top: -30rem;
     }
   }
 
   .blank2 {
-    height: 120vh;
+    height: 115vh;
   }
 
   @media screen and (max-width:800px) {
@@ -153,7 +167,15 @@
     margin-left: 2.5rem;
     font-weight: bold;
     font-size: 20px;
+    color: black; /* Explicitly set the color to black */
+    text-decoration: none; /* Remove underline from link */
   }
+
+  .Text>a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
 
   .image {
     width: 260px;
@@ -162,7 +184,15 @@
     background-position: center;
     margin-bottom: 20px;
     border-radius: 20px;
+    opacity: 0; /* start images as invisible */
+    transform: translateY(20px); /* start images slightly translated downward */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* smooth transition for pop up effect */
   }
+
+  .image.is-visible {
+  opacity: 1; /* fully visible when in viewport */
+  transform: translateY(0); /* move to original position */
+}
 
   .image1 {
     background-image: url('CP.jpg');
@@ -208,5 +238,9 @@
       margin-left: 2rem;
       margin-right: 1rem;
       border-radius: 20px;
+    }
+    .grid-container .image {
+      width: 240px; /* Fixed width */
+      height: 240px; /* Fixed height */
     }
   }

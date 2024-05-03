@@ -34,7 +34,7 @@
             </section>
             <section class="blank2"></section>
             <secyion>
-                <p class="Text">Must Visit Places in New York :</p>
+                <p class="Text"><a href="place.html"  noreferrer>Must Visit Places in New York :</a></p>
             </secyion>
             <div class="grid-container">
                 <div class="image image1"></div>
@@ -50,6 +50,25 @@
             <p></p>
         </div>
     </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+              } else {
+                entry.target.classList.remove('is-visible');
+              }
+            });
+          }, {
+            threshold: 0.5 // Trigger when 50% of the image is visible
+          });
+      
+          document.querySelectorAll('.image').forEach(image => {
+            observer.observe(image);
+          });
+        });
+      </script>
 </body>
 
 </html>

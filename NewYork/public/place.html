@@ -22,13 +22,37 @@
                     </ul>
                 </nav>
             </div>
-            <h1>Must-Visit Places in New York</h1>
+            <div class = "top">
+                <div class = "left">
+            <h1>Discover the best places in New York🗽</h1>
+            <div class="facts"> New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.</div>
+        </div>
+            <p class="image"></p>
+            </div>
             <div id="placesList"></div>
         </div>
     </main>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+              
+            const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+            } else {
+                entry.target.classList.remove('is-visible');
+            }
+        });
+    }, {
+        threshold: 0.5 // Trigger when 50% of the element is visible
+    });
+
+    // Setup observer for images initially
+    document.querySelectorAll('.image').forEach(image => {
+        observer.observe(image);
+    });
+
             fetch('/list-places')
                 .then(response => response.json())
                 .then(places => {
@@ -39,11 +63,12 @@
                         placeDiv.innerHTML = `
                         <h2>${place.title}</h2>
                         <img src="${place.imageUrl}" alt="Image of ${place.title}">
-                        <p><strong>Description:</strong> ${place.description}</p>
+                        <p class="data"><strong>Description:</strong> ${place.description}</p>
                         <p><strong>Location:</strong> ${place.location}</p>
-                        <p><strong>Rating:</strong> ${place.rating} / 5</p>
+                        <p><strong>★</strong> ${place.rating} / 5</p>
                     `;
                         list.appendChild(placeDiv);
+                        observer.observe(placeDiv); // Observe the new place div for scroll animation
                     });
                 })
                 .catch(error => {

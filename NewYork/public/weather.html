@@ -63,6 +63,22 @@
         </div>
     </main>
     <script>
+            document.addEventListener('DOMContentLoaded', function () {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                } else {
+                    entry.target.classList.remove('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.5  // Adjust this value based on how much of the element should be visible before triggering
+        });
+
+        // Select the weatherAll section for observation
+        const weatherSection = document.querySelector('.weatherAll');
+        observer.observe(weatherSection);
         const weatherImages = {
             "Sunny": "sun.png",
             "Clear Sky": "sun.png",
@@ -97,6 +113,8 @@
         }
 
         getData();
+
+    });
     </script>
     </body>
     

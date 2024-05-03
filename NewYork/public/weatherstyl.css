@@ -19,7 +19,7 @@ body {
 }
 
 .blankspace{
-width: 62rem;
+width: 60rem;
 }
 @media screen and (max-width:800px) {
     .blankspace{
@@ -83,9 +83,9 @@ width: 62rem;
 
 @media screen and (max-width:800px) {
     .image {
-        margin-left: 3rem;
-        width: 30rem;
-        height: 30rem;
+        margin-left: 1.8rem;
+        width: 29rem;
+        height: 28rem;
         align-items: center;
         background-position: center;
     }
@@ -97,6 +97,14 @@ width: 62rem;
     flex-direction: row;
     /* This will arrange its children (including .weatherDetail) in a row by default */
     margin-left: 1rem;
+    opacity: 0;  /* Start with the section as invisible */
+    transform: translateY(20px);  /* Start slightly translated downward */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;  /* Smooth transition */
+}
+
+.weatherAll.is-visible {
+    opacity: 1;  /* Fully visible when in viewport */
+    transform: translateY(0);  /* Move to original position */
 }
 
 @media screen and (max-width:800px) {
